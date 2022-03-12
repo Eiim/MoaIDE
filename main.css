@@ -1,0 +1,68 @@
+html {
+	font-family: 'Roboto Slab', sans-serif;
+	height: 100%;
+}
+
+body {
+	height: calc(100% - 16px);
+	display: flex;
+	flex-direction: column;
+}
+
+p {
+	font-size: 20px;
+	margin: 10px;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	width: 100%;
+	border-bottom-color: black;
+	border-bottom-width: .15em;
+	border-bottom-style: solid;
+}
+
+#header > * {
+	line-height:60px;
+	width:100%;
+	height:60px;
+}
+
+#title {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#boxesHolder {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+}
+.holderCol {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: calc(100% - 20px);
+	padding: 10px;
+}
+
+#inHolder, #outHolder {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: calc(100% - 10px);
+}
+
+textarea {
+	height: inherit;
+	resize: none;
+}
+
+.textAndButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MoaIDE: A Moaiscript IDE and interpreter</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
+		<link href="main.css" rel="stylesheet">
+		<script type="text/javascript" src="ptMoaiTranslate.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div id="title">MoaIDE</div>
+			<div style="text-align:right;padding-right:20px;"><a href="https://esolangs.org/wiki/Moaiscript">Moaiscript docs</a></div>
+		</div>
+		<div id="boxesHolder">
+			<div id="textHolder" class="holderCol">
+				<span class="textAndButton">
+					<p>Plaintext</p>
+					<button type="button" id="ptToMoai" onclick="ptToMoai()">To Moaiscript</button>
+				</span>
+				<textarea id="plaintext"></textarea>
+			</div>
+			<div id="moaiHolder" class="holderCol">
+				<span class="textAndButton">
+					<p>Moaiscript</p>
+					<button type="button" id="MoaiToPt" onclick="moaiToPt()">To Plaintext</button>
+				</span>
+				<textarea id="moai"></textarea>
+			</div>
+			<div id="ioHolder" class="holderCol">
+				<div id="inHolder" class="holder">
+					<span class="textAndButton">
+						<p>Input</p>
+						<button type="button" id="run">Run</button>
+					</span>
+					<textarea id="input"></textarea>
+				</div>
+				<div id="outHolder" class="holder">
+					<p>Output</p>
+					<textarea id="output"></textarea>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
