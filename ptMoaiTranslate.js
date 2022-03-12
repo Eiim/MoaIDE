@@ -4,7 +4,7 @@ function moaiToPt() {
 	var pText = "";
 	var moaiArr = moai.split("\n");
 	var nArr = [];
-	moaiArr.forEach(m => (nArr.push([...m].length)));
+	moaiArr.forEach(m => (nArr.push(m.split("🗿").length-1)));
 	for(var n of nArr) {
 		if(n >= 10) {
 			pText += "push "+(n-10)+"\n";

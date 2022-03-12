@@ -6,7 +6,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
 		<link href="main.css" rel="stylesheet">
-		<script type="text/javascript" src="ptMoaiTranslate.js"></script>
+		<script type="text/javascript" src="ptMoaiTranslate.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="moaiscript.js" charset="UTF-8"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -32,7 +33,7 @@
 				<div id="inHolder" class="holder">
 					<span class="textAndButton">
 						<p>Input</p>
-						<button type="button" id="run">Run</button>
+						<button type="button" id="run" onclick="runMoai()">Run</button>
 					</span>
 					<textarea id="input"></textarea>
 				</div>
