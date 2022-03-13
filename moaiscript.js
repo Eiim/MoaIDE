@@ -7,6 +7,8 @@ runMoai = function() {
 moaiscipt = function(moai, input) {
 	moaiLines = moai.split("\n");
 	
+	input = [...input];
+	
 	// Initialize data structures
 	mem = [];
 	stack = [0,0];
@@ -31,25 +33,25 @@ moaiscipt = function(moai, input) {
 		if(moais == 0) {
 			// Debug
 			// New function in this implementation
-			console.log("Memory: ")
+			console.log("Memory: ");
 			console.log(mem);
 			console.log("Stack: ");
 			console.log(stack);
 			console.log("Compare flag: "+compare);
 			console.log();
 		} else if (moais == 1) {
-			// Take input per-codepoint
+			// Take input as codepoints per-character
 			// Official spec is undefined with respect to multi-byte Unicode characters
-			// Will probably change soon to be in line with Dtp09's implementation
+			// Hopefully in line with Dtp09's implementation
 			if(stack[0] >= input.length) {
 				stack.unshift(0);
 			} else {
-				stack.unshift(input.codePointAt(stack[0]));
+				stack.unshift(input[stack[0]].codePointAt(0));
 			}
 		} else if (moais == 2) {
-			// Output codepoints
+			// Output (potentially large) codepoints
 			// Official spec is undefined with respect to multi-byte Unicode characters
-			// Will probably change soon to be in line with Dtp09's implementation
+			// Hopefully in line with Dtp09's implementation
 			if(stack[0] == 0) {
 				output += "🗿";
 			} else {
